@@ -63,7 +63,7 @@ function App() {
         </div>
 
         <div className='container'>
-          <button onClick={() => {showAllUsers()}}>SHOW USERS</button>
+          <button style={{ display: 'block'}} onClick={() => {showAllUsers()}}>SHOW USERS</button>
           {
             ! users ? 'no users to show ...' : users.map(user => <User {...user} />)
           }
