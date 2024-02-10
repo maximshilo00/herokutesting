@@ -1,0 +1,11 @@
+.User {
+    margin: 3px;
+    display: block;
+}
+
+.userSpan {
+    margin: 1px 3px;
+    display: inline;
+
+    font-size: 12px;
+}
