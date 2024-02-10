@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  margin: 24px;
+}
+
+input {
+  display: block;
+  margin: 6px;
+  width: 200px;
+  height: 24px;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  /* text-transform: uppercase; */
+  font-weight: bold;
+}
