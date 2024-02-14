@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-import '/Users/maxshilo/Documents/react-node-app/client/src/css/Search.css'
+import '../css/Search.css'
 
 export default function Search (props) {
     const [searchString, setSearchString] = useState('')
