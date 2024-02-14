@@ -1,6 +1,9 @@
 .User {
     margin: 3px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .userSpan {
@@ -8,4 +11,47 @@
     display: inline;
 
     font-size: 12px;
+}
+
+.userDiv {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px gray;
+    width: calc(80vw - 60px);
+    margin-top: 3vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.userInfoDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.userFollowingSubjects {
+    display: flex;
+    flex-direction: column;
+    margin: 6px;
+    text-align: left;
+}
+
+
+
+.userFullNameSpan {
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.userFollowingSpan {
+    margin: 6px;
+}
+.userPagePostsDiv {
+    margin-top: 3vh;
+    width: 40vw;
 }

@@ -1,74 +1,36 @@
 import React from 'react'
-import logo from './logo.svg';
+import { useState } from 'react'
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 
+import Home from './components/Home'
+import Wall from './components/Wall'
 import User from './components/User'
+import Search from './components/Search'
+import Header from './components/Header'
 
 function App() {
-  const [data, setData] = React.useState(null)
-  const [user, setUser] = React.useState(null)
-  const [users, setUsers] = React.useState(null)
-
-  const [username, setUsername] = React.useState(null)
-  const [password, setPassword] = React.useState(null)
-
-  React.useEffect(() => {
-    fetch('/api')
-      .then((res) => res.json())
-      .then((data) => setData(data.message))
-  }, [])
-
-  const getUser = async () => {
-    await fetch('/dbgetUser')
-      .then(res => res.json())
-      .then(data => setUser(data))
-  }
-
-  const registerUser = async () => {
-    let newUser = {
-      username,
-      password
-    }
-
-    await fetch('/registerUser', {
-      method: 'POST',
-      headers: {
-        'Content-Type' : 'application/json'
-      },
-      body: JSON.stringify(newUser)
-    })
-      .then(res => res.json())
-      .then(data => alert(data.added))
-  }
-
-  const showAllUsers = async () => {
-    let tempUsers = []
-    tempUsers = await fetch('/getAllUsers').then(res => res.json())
-    setUsers([...tempUsers])
-  }
+  const [user, setUser] = useState(null)
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Header />
+      <Search />
+      <Router>
+        {/* <nav>
+          <ul>
+            <li><Link to="/">HOME</Link></li>
+            <li><Link to={`/wall/${sessionStorage.getItem('user')}`}>WALL</Link></li>
+            <li><Link to={`/user/${sessionStorage.getItem('user')}`}>USER</Link></li>
+          </ul>
+        </nav> */}
+        <Routes>
+          <Route path="/" element={<Home setUser={setUser} />} />
+          <Route path="/wall/:id" element={<Wall />} />
+          <Route path="/user/:id" element={<User />} />
+        </Routes>
+      </Router>
 
-        {/* <p>{!data ? "Loading ..." : data}</p> */}
-        {/* <p>{!user ? 'click button to show user' : user.username}</p> */}
-        {/* <button onClick={() => getUser()}>CLICK ME</button> */}
-
-        <div className='container'>
-          <input onChange={(e) => { setUsername(e.target.value)}} type='text' placeholder='username'></input>
-          <input onChange={(e) => { setPassword(e.target.value)}} type='password' placeholder='password'></input>
-          <button onClick={() => registerUser()}>REGISTER</button>
-        </div>
-
-        <div className='container'>
-          <button style={{ display: 'block'}} onClick={() => {showAllUsers()}}>SHOW USERS</button>
-          {
-            ! users ? 'no users to show ...' : users.map(user => <User {...user} />)
-          }
-        </div>
-      </header>
     </div>
   );
 }

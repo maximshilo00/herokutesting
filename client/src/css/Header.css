@@ -1,0 +1,29 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: calc(100vw - 44px);
+    padding: 20px 22px;
+    margin: 0;
+
+    background: linear-gradient(to right,  rgba(255, 240, 150, 0.5),  rgba(255, 240, 150, 0.5));
+
+    box-shadow: 0 0 4px gray;
+}
+
+.headerDefaultSpan {
+    font-weight: bold;
+}
+
+.headerDefaultButton {
+    border: none;
+    border-radius: 6px;
+    margin: 0 6px;
+    background: linear-gradient(to bottom, white, rgba(0, 0, 0, 0.05));
+}
+
+.headerLeftSide {
+    padding-left: 12px;
+}

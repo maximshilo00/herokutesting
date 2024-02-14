@@ -1,0 +1,74 @@
+.Post {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+
+    margin: 6px;
+
+    max-height: fit-content;
+
+    background: white;
+
+    padding: 24px;
+    border-radius: 0 10px 10px 0;
+
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.5);
+}
+
+.postLikesDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 6px;
+
+    flex : 1;
+}
+
+.postContentDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
+    margin: 6px;
+    flex : 10;
+}
+
+.likesSpan {
+    font-size: 30px;
+}
+
+.likesWordSpan {
+    font-size: 10px;
+}
+
+.postContentP {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.postAuthorSpan {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+
+.postDateSpan {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.likeButton {
+    color: white;
+    background: red;
+    border: none;
+    border-radius: 6px;
+
+    font-size: 20px;
+    margin: 20px;
+}

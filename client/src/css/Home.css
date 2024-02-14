@@ -1,0 +1,76 @@
+.Home {
+    /* background: red; */
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    /* height: 50vh; */
+    margin: 2vh 10vw;
+
+    border-radius: 6px;
+}
+
+.homeDefaultFlexColumnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* overflow-wrap: normal; */
+
+    text-align: left;
+
+    flex : 1;
+    margin: 3vw;
+
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(128, 128, 128, 0.493);
+
+    padding: 24px;
+}
+
+.HomeH1 {
+    color: rgba(20, 20, 0, 0.8);
+    margin: 0 0 12px 0;
+    padding: 6px;
+    font-size: 20px;
+    font-weight: bolder;
+    align-self: flex-start;
+    width: calc(100% - 12px);
+
+    border-bottom: 1px solid rgba(20, 20, 0, 0.3);
+}
+
+.homeP {
+    padding: 24px;
+    font-stretch: semi-expanded;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.homeInput, .homeButton {
+    border: none;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 6px;
+    width: calc(100% - 12px);
+    margin: 3px;
+}
+
+.homeInput {
+    margin: 6px 0;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 6px;
+    text-indent: 12px;
+}
+
+.homeButton {
+    padding: 12px;
+    background: rgba(255, 240, 150, 0.5);
+}
